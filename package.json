@@ -1,0 +1,37 @@
+{
+  "name": "leophant-mysql",
+  "version": "0.0.7",
+  "description": "MySQL connector for Leophant",
+  "license": "MIT",
+  "author": "onwd",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leophant/leophant-mysql.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leophant/leophant-mysql/issues"
+  },
+  "homepage": "https://github.com/leophant/leophant-mysql#readme",
+  "keywords": [
+    "leophant",
+    "orm",
+    "javascript",
+    "database",
+    "node",
+    "mysql",
+    "postgresql"
+  ],
+  "main": "./lib/mysql.js",
+  "scripts": {
+    "test": "npm run test-unit",
+    "test-unit": "mocha --check-leaks -R dot \"test/unit/**/*.test.js\"",
+    "cover": "npm run cover-unit",
+    "cover-unit": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R dot \"test/unit/**/*.test.js\" && codecov"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "codecov": "^3.1.0",
+    "istanbul": "^1.1.0-alpha.1",
+    "mocha": "^5.2.0"
+  }
+}
